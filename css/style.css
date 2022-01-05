@@ -131,5 +131,10 @@ wrapper {
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--cyan);
+    text-decoration: none;
+}
+.attribution a:hover {
+    color: var(--cyan);
+    font-weight: 600;
 }
