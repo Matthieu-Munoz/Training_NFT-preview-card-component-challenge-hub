@@ -1,0 +1,135 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+wrapper {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif !important;
+    background-color: var(--main-bg);
+    height: 100vh;
+    display: flex;
+    color: var(--soft-blue);
+}
+
+.card {
+    max-width: 300px;
+    background-color: var(--card-bg);
+    padding: 1.5em;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: -1px -1px 24px 12px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: -1px -1px 24px 12px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -1px -1px 24px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: var(--cyan);
+    border-radius: 15px;
+}
+
+.overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container:hover .overlay {
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.infos__title--link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.infos__title--link:hover {
+    text-decoration: none;
+    color: var(--cyan);
+}
+
+.infos__data {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--soft-blue);
+}
+
+.infos__data--ETH p {
+    color: var(--cyan);
+}
+
+.infos__data--clock,
+.infos__data--ETH {
+    display: flex;
+    align-items: center;
+}
+
+.infos__data--clock-svg,
+.infos__data--ETH-svg {
+    padding-right: 5px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author__avatar {
+    width: 2em;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin-right: 15px
+}
+
+.author__name {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.author__name:hover {
+    text-decoration: none;
+    color: var(--cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    color: var(--white);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
