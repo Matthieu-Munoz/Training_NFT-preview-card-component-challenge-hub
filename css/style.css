@@ -1,6 +1,7 @@
 :root {
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
+    --cyan-alt: hsl(178, 87%, 36%);
     --main-bg: hsl(217, 54%, 11%);
     --card-bg: hsl(216, 50%, 16%);
     --line: hsl(215, 32%, 27%);
@@ -27,23 +28,22 @@ wrapper {
     padding: 1.5em;
     border-radius: 15px;
     margin: auto;
-    box-shadow: -1px -1px 24px 12px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: -1px -1px 24px 12px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: -1px -1px 24px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
-.card-img {
-    width: 100%;
-    border-radius: 15px;
-}
 
-.container {
+.card__nft__img {
     position: relative;
     width: 300px;
     height: 300px;
 }
 
-.overlay {
+.nft__img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.nft__img--overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -55,14 +55,14 @@ wrapper {
     border-radius: 15px;
 }
 
-.overlay img {
+.nft__img--overlay img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.container:hover .overlay {
+.card__nft__img:hover .nft__img--overlay {
     opacity: 0.7;
     cursor: pointer;
 }
@@ -72,7 +72,7 @@ wrapper {
     color: var(--white);
 }
 
-.infos__title--link:hover {
+.nft__infos__title--link:hover {
     text-decoration: none;
     color: var(--cyan);
 }
@@ -134,6 +134,7 @@ wrapper {
     color: var(--cyan);
     text-decoration: none;
 }
+
 .attribution a:hover {
     color: var(--cyan);
     font-weight: 600;
